@@ -8,7 +8,7 @@ weather api for nepal
   <br>
   pass ``` ?placenp=placename``` for weather in Nepali
 #AVAILABLE placename
-	These are siply places available at http://mfd.gov.np/weather/ science all the data are scrapped from that site
+These are siply places available at http://mfd.gov.np/weather/ science all the data are scrapped from that site<br>
 	Dadeldhura,Dipayal,Dhangadi , Birendranagar , Nepalgunj , Jumla , Dang , Pokhara , Bhairahawa , Simara , Kathmandu , Okhaldhunga , Taplejung , Dhankuta , Biratnagar , Jomsom , Dharan , Lumle , Janakpur , Jiri 
 
 	
