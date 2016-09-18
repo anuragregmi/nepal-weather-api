@@ -4,6 +4,11 @@ weather api for nepal
 #USING THE API
   This api uses get request and returns value in json format.
   <br>
-  pass ``` ?place=yourplace ``` for weather in English
+  pass ``` ?place=placename ``` for weather in English
   <br>
-  pass ``` ?placenp=yourplace``` for weather in Nepali
+  pass ``` ?placenp=placename``` for weather in Nepali
+#AVAILABLE placename
+	Dadeldhura,Dipayal,Dhangadi , Birendranagar , Nepalgunj , Jumla , Dang , Pokhara , Bhairahawa , Simara , Kathmandu , Okhaldhunga , Taplejung , Dhankuta , Biratnagar , Jomsom , Dharan , Lumle , Janakpur , Jiri 
+
+	
+
