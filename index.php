@@ -340,7 +340,7 @@ function english($place)//for english
 	
 	else
 	{
-		$result = "{\"status\":\"false\",\"msg\":\"sorry could not find that place... please pass the place=[one of the valid places]\",\"valid_places\":['Dadeldhura','Dipayal','Dhangadi','Birendranagar','Nepalgunj','Jumla','Dang','Pokhara','Bhairahawa','Simara','Kathmandu','Okhaldhunga','Taplejung','Dhankuta','Biratnagar','Jomsom','Dharan','Lumle','Janakpur','Jiri']";
+		$result = "{\"status\":\"false\",\"msg\":\"sorry could not find that place... please pass the place=[one of the valid places]\",\"valid_places\":['Dadeldhura','Dipayal','Dhangadi','Birendranagar','Nepalgunj','Jumla','Dang','Pokhara','Bhairahawa','Simara','Kathmandu','Okhaldhunga','Taplejung','Dhankuta','Biratnagar','Jomsom','Dharan','Lumle','Janakpur','Jiri']}";
 
 		echo $result;
 	}
@@ -745,8 +745,8 @@ function nepali($place)
 	
 	else
 	{
-		$result = "{\"status\":\"false\",\"msg\":\"sorry could not find that place... please pass the place=[one of the valid places]\",\"valid_places\":[";
-		$result = "{\"status\":\"false\",\"msg\":\"sorry could not find that place... please pass the place=[one of the valid places]\",\"valid_places\":['Dadeldhura','Dipayal','Dhangadi','Birendranagar','Nepalgunj','Jumla','Dang','Pokhara','Bhairahawa','Simara','Kathmandu','Okhaldhunga','Taplejung','Dhankuta','Biratnagar','Jomsom','Dharan','Lumle','Janakpur','Jiri']";
+	
+		$result = "{\"status\":\"false\",\"msg\":\"sorry could not find that place... please pass the place=[one of the valid places]\",\"valid_places\":['Dadeldhura','Dipayal','Dhangadi','Birendranagar','Nepalgunj','Jumla','Dang','Pokhara','Bhairahawa','Simara','Kathmandu','Okhaldhunga','Taplejung','Dhankuta','Biratnagar','Jomsom','Dharan','Lumle','Janakpur','Jiri']}";
 
 		echo $result;
 
