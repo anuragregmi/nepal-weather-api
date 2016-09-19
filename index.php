@@ -76,7 +76,7 @@ function get_weather($grp)
 	else
 	{
 		$weatherS["status"] = "false";
-		$weatherS["msg"] = "sorry could not find that place";
+		$weatherS["msg"] = "Sorry The information about the place you tried is  currently not availabe";
 		for ($n=1; $n<= $noOfPlaces;$n++)
 		{
 			$places[$n-1] = $weather[$n]["place"];
@@ -358,18 +358,20 @@ function nepali($place)
 	if($place === "dadeldhura")
 	{
 		$wtr = get_weather(1);
-		$wtr["place"] = "डढेलधुरा";
-		$wtr["max"] = changenumbers($wtr["max"]);
-		$wtr["min"] = changenumbers($wtr["min"]);
-		if($wtr["rain"] === "Traces")
+		if($wtr["status"] != "false")
 		{
-			$wtr["rain"] = "फाटफुट";
+			$wtr["place"] = "डढेलधुरा";
+			$wtr["max"] = changenumbers($wtr["max"]);
+			$wtr["min"] = changenumbers($wtr["min"]);
+			if($wtr["rain"] === "Traces")
+			{
+				$wtr["rain"] = "फाटफुट";
+			}
+			else
+			{
+				$wtr["rain"] = changenumbers($wtr["rain"]);
+			}
 		}
-		else
-		{
-			$wtr["rain"] = changenumbers($wtr["rain"]);
-		}
-		
 		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
@@ -377,18 +379,20 @@ function nepali($place)
 	else if($place === "dipayal")
 	{
 		$wtr = get_weather(2);
-		$wtr["place"] = "दिपाएल";
-		$wtr["max"] = changenumbers($wtr["max"]);
-		$wtr["min"] = changenumbers($wtr["min"]);
-		if($wtr["rain"] === "Traces")
+		if($wtr["status"] != "false")
 		{
-			$wtr["rain"] = "फाटफुट";
+			$wtr["place"] = "दिपाएल";
+			$wtr["max"] = changenumbers($wtr["max"]);
+			$wtr["min"] = changenumbers($wtr["min"]);
+			if($wtr["rain"] === "Traces")
+			{
+				$wtr["rain"] = "फाटफुट";
+			}
+			else
+			{
+				$wtr["rain"] = changenumbers($wtr["rain"]);
+			}
 		}
-		else
-		{
-			$wtr["rain"] = changenumbers($wtr["rain"]);
-		}
-		
 		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
@@ -396,17 +400,21 @@ function nepali($place)
 	else if($place === "dhangadi")
 	{
 		$wtr = get_weather(3);
-		$wtr["place"] = "धनगढी";
-		$wtr["max"] = changenumbers($wtr["max"]);
-		$wtr["min"] = changenumbers($wtr["min"]);
-		if($wtr["rain"] === "Traces")
+		if($wtr["status"] != "false")
 		{
-			$wtr["rain"] = "फाटफुट";
+			$wtr["place"] = "धनगढी";
+			$wtr["max"] = changenumbers($wtr["max"]);
+			$wtr["min"] = changenumbers($wtr["min"]);
+			if($wtr["rain"] === "Traces")
+			{
+				$wtr["rain"] = "फाटफुट";
+			}
+			else
+			{
+				$wtr["rain"] = changenumbers($wtr["rain"]);
+			}
 		}
-		else
-		{
-			$wtr["rain"] = changenumbers($wtr["rain"]);
-		}
+			
 		
 		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
@@ -415,18 +423,21 @@ function nepali($place)
 	else if($place === "birendranagar")
 	{
 		$wtr = get_weather(4);
-		$wtr["place"] = "बिरेन्द्र्नगर";
-		$wtr["max"] = changenumbers($wtr["max"]);
-		$wtr["min"] = changenumbers($wtr["min"]);
-		if($wtr["rain"] === "Traces")
+		if($wtr["status"] != "false")
 		{
-			$wtr["rain"] = "फाटफुट";
+			$wtr["place"] = "बिरेन्द्र्नगर";
+			$wtr["max"] = changenumbers($wtr["max"]);
+			$wtr["min"] = changenumbers($wtr["min"]);
+			if($wtr["rain"] === "Traces")
+			{
+				$wtr["rain"] = "फाटफुट";
+			}
+			else
+			{
+				$wtr["rain"] = changenumbers($wtr["rain"]);
+			}
 		}
-		else
-		{
-			$wtr["rain"] = changenumbers($wtr["rain"]);
-		}
-		
+
 		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
@@ -434,16 +445,19 @@ function nepali($place)
 	else if($place === "nepalgunj")
 	{
 		$wtr = get_weather(5);
-		$wtr["place"] = "नेपालगञ्ज";
-		$wtr["max"] = changenumbers($wtr["max"]);
-		$wtr["min"] = changenumbers($wtr["min"]);
-		if($wtr["rain"] === "Traces")
+		if($wtr["status"] != "false")
 		{
-			$wtr["rain"] = "फाटफुट";
-		}
-		else
-		{
-			$wtr["rain"] = changenumbers($wtr["rain"]);
+			$wtr["place"] = "नेपालगञ्ज";
+			$wtr["max"] = changenumbers($wtr["max"]);
+			$wtr["min"] = changenumbers($wtr["min"]);
+			if($wtr["rain"] === "Traces")
+			{
+				$wtr["rain"] = "फाटफुट";
+			}
+			else
+			{
+				$wtr["rain"] = changenumbers($wtr["rain"]);
+			}
 		}
 		
 		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
@@ -453,18 +467,20 @@ function nepali($place)
 	else if($place === "jumla")
 	{
 		$wtr = get_weather(6);
-		$wtr["place"] = "जुम्ला";
-		$wtr["max"] = changenumbers($wtr["max"]);
-		$wtr["min"] = changenumbers($wtr["min"]);
-		if($wtr["rain"] === "Traces")
+		if($wtr["status"] != "false")
 		{
-			$wtr["rain"] = "फाटफुट";
+			$wtr["place"] = "जुम्ला";
+			$wtr["max"] = changenumbers($wtr["max"]);
+			$wtr["min"] = changenumbers($wtr["min"]);
+			if($wtr["rain"] === "Traces")
+			{
+				$wtr["rain"] = "फाटफुट";
+			}
+			else
+			{
+				$wtr["rain"] = changenumbers($wtr["rain"]);
+			}
 		}
-		else
-		{
-			$wtr["rain"] = changenumbers($wtr["rain"]);
-		}
-		
 		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
@@ -472,18 +488,20 @@ function nepali($place)
 	else if($place === "dang")
 	{
 		$wtr = get_weather(7);
-		$wtr["place"] = "दाङ";
-		$wtr["max"] = changenumbers($wtr["max"]);
-		$wtr["min"] = changenumbers($wtr["min"]);
-		if($wtr["rain"] === "Traces")
+		if($wtr["status"] != "false")
 		{
-			$wtr["rain"] = "फाटफुट";
+			$wtr["place"] = "दाङ";
+			$wtr["max"] = changenumbers($wtr["max"]);
+			$wtr["min"] = changenumbers($wtr["min"]);
+			if($wtr["rain"] === "Traces")
+			{
+				$wtr["rain"] = "फाटफुट";
+			}
+			else
+			{
+				$wtr["rain"] = changenumbers($wtr["rain"]);
+			}
 		}
-		else
-		{
-			$wtr["rain"] = changenumbers($wtr["rain"]);
-		}
-		
 		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
@@ -491,16 +509,19 @@ function nepali($place)
 	else if($place === "pokhara")
 	{
 		$wtr = get_weather(8);
-		$wtr["place"] = "पोखरा";
-		$wtr["max"] = changenumbers($wtr["max"]);
-		$wtr["min"] = changenumbers($wtr["min"]);
-		if($wtr["rain"] === "Traces")
+		if($wtr["status"] != "false")
 		{
-			$wtr["rain"] = "फाटफुट";
-		}
-		else
-		{
-			$wtr["rain"] = changenumbers($wtr["rain"]);
+			$wtr["place"] = "पोखरा";
+			$wtr["max"] = changenumbers($wtr["max"]);
+			$wtr["min"] = changenumbers($wtr["min"]);
+			if($wtr["rain"] === "Traces")
+			{
+				$wtr["rain"] = "फाटफुट";
+			}
+			else
+			{
+				$wtr["rain"] = changenumbers($wtr["rain"]);
+			}
 		}
 		
 		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
@@ -510,16 +531,19 @@ function nepali($place)
 	else if($place === "bhairahawa")
 	{
 		$wtr = get_weather(9);
-		$wtr["place"] = "भैरहवा";
-		$wtr["max"] = changenumbers($wtr["max"]);
-		$wtr["min"] = changenumbers($wtr["min"]);
-		if($wtr["rain"] === "Traces")
+		if($wtr["status"] != "false")
 		{
-			$wtr["rain"] = "फाटफुट";
-		}
-		else
-		{
-			$wtr["rain"] = changenumbers($wtr["rain"]);
+			$wtr["place"] = "भैरहवा";
+			$wtr["max"] = changenumbers($wtr["max"]);
+			$wtr["min"] = changenumbers($wtr["min"]);
+			if($wtr["rain"] === "Traces")
+			{
+				$wtr["rain"] = "फाटफुट";
+			}
+			else
+			{
+				$wtr["rain"] = changenumbers($wtr["rain"]);
+			}
 		}
 		
 		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
@@ -529,16 +553,19 @@ function nepali($place)
 	else if($place === "simara")
 	{
 		$wtr = get_weather(10);
-		$wtr["place"] = "सिमारा";
-		$wtr["max"] = changenumbers($wtr["max"]);
-		$wtr["min"] = changenumbers($wtr["min"]);
-		if($wtr["rain"] === "Traces")
+		if($wtr["status"] != "false")
 		{
-			$wtr["rain"] = "फाटफुट";
-		}
-		else
-		{
-			$wtr["rain"] = changenumbers($wtr["rain"]);
+			$wtr["place"] = "सिमारा";
+			$wtr["max"] = changenumbers($wtr["max"]);
+			$wtr["min"] = changenumbers($wtr["min"]);
+			if($wtr["rain"] === "Traces")
+			{
+				$wtr["rain"] = "फाटफुट";
+			}
+			else
+			{
+				$wtr["rain"] = changenumbers($wtr["rain"]);
+			}
 		}
 		
 		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
@@ -548,16 +575,19 @@ function nepali($place)
 	else if($place === "kathmandu")
 	{
 		$wtr = get_weather(11);
-		$wtr["place"] = "काठमाडौं";
-		$wtr["max"] = changenumbers($wtr["max"]);
-		$wtr["min"] = changenumbers($wtr["min"]);
-		if($wtr["rain"] === "Traces")
+		if($wtr["status"] != "false")
 		{
-			$wtr["rain"] = "फाटफुट";
-		}
-		else
-		{
-			$wtr["rain"] = changenumbers($wtr["rain"]);
+			$wtr["place"] = "काठमाडौं";
+			$wtr["max"] = changenumbers($wtr["max"]);
+			$wtr["min"] = changenumbers($wtr["min"]);
+			if($wtr["rain"] === "Traces")
+			{
+				$wtr["rain"] = "फाटफुट";
+			}
+			else
+			{
+				$wtr["rain"] = changenumbers($wtr["rain"]);
+			}
 		}
 		
 		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
@@ -567,18 +597,20 @@ function nepali($place)
 	else if($place === "okhaldhunga")
 	{
 		$wtr = get_weather(12);
-		$wtr["place"] = "ओखल्ढुङ्गा";
-		$wtr["max"] = changenumbers($wtr["max"]);
-		$wtr["min"] = changenumbers($wtr["min"]);
-		if($wtr["rain"] === "Traces")
+		if($wtr["status"] != "false")
 		{
-			$wtr["rain"] = "फाटफुट";
+			$wtr["place"] = "ओखल्ढुङ्गा";
+			$wtr["max"] = changenumbers($wtr["max"]);
+			$wtr["min"] = changenumbers($wtr["min"]);
+			if($wtr["rain"] === "Traces")
+			{
+				$wtr["rain"] = "फाटफुट";
+			}
+			else
+			{
+				$wtr["rain"] = changenumbers($wtr["rain"]);
+			}
 		}
-		else
-		{
-			$wtr["rain"] = changenumbers($wtr["rain"]);
-		}
-		
 		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
@@ -586,18 +618,20 @@ function nepali($place)
 	else if($place === "taplejung")
 	{
 		$wtr = get_weather(13);
-		$wtr["place"] = "ताप्लेजुङ";
-		$wtr["max"] = changenumbers($wtr["max"]);
-		$wtr["min"] = changenumbers($wtr["min"]);
-		if($wtr["rain"] === "Traces")
+		if($wtr["status"] != "false")
 		{
-			$wtr["rain"] = "फाटफुट";
+			$wtr["place"] = "ताप्लेजुङ";
+			$wtr["max"] = changenumbers($wtr["max"]);
+			$wtr["min"] = changenumbers($wtr["min"]);
+			if($wtr["rain"] === "Traces")
+			{
+				$wtr["rain"] = "फाटफुट";
+			}
+			else
+			{
+				$wtr["rain"] = changenumbers($wtr["rain"]);
+			}
 		}
-		else
-		{
-			$wtr["rain"] = changenumbers($wtr["rain"]);
-		}
-		
 		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
@@ -605,18 +639,20 @@ function nepali($place)
 	else if($place === "dhankuta")
 	{
 		$wtr = get_weather(14);
-		$wtr["place"] = "धनकुटा";
-		$wtr["max"] = changenumbers($wtr["max"]);
-		$wtr["min"] = changenumbers($wtr["min"]);
-		if($wtr["rain"] === "Traces")
+		if($wtr["status"] != "false")
 		{
-			$wtr["rain"] = "फाटफुट";
+			$wtr["place"] = "धनकुटा";
+			$wtr["max"] = changenumbers($wtr["max"]);
+			$wtr["min"] = changenumbers($wtr["min"]);
+			if($wtr["rain"] === "Traces")
+			{
+				$wtr["rain"] = "फाटफुट";
+			}
+			else
+			{
+				$wtr["rain"] = changenumbers($wtr["rain"]);
+			}
 		}
-		else
-		{
-			$wtr["rain"] = changenumbers($wtr["rain"]);
-		}
-		
 		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
@@ -624,18 +660,20 @@ function nepali($place)
 	else if($place === "biratnagar")
 	{
 		$wtr = get_weather(15);
-		$wtr["place"] = "बिराटनगर";
-		$wtr["max"] = changenumbers($wtr["max"]);
-		$wtr["min"] = changenumbers($wtr["min"]);
-		if($wtr["rain"] === "Traces")
+		if($wtr["status"] != "false")
 		{
-			$wtr["rain"] = "फाटफुट";
+			$wtr["place"] = "बिराटनगर";
+			$wtr["max"] = changenumbers($wtr["max"]);
+			$wtr["min"] = changenumbers($wtr["min"]);
+			if($wtr["rain"] === "Traces")
+			{
+				$wtr["rain"] = "फाटफुट";
+			}
+			else
+			{
+				$wtr["rain"] = changenumbers($wtr["rain"]);
+			}
 		}
-		else
-		{
-			$wtr["rain"] = changenumbers($wtr["rain"]);
-		}
-		
 		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
@@ -643,18 +681,20 @@ function nepali($place)
 	else if($place === "jomsom")
 	{
 		$wtr = get_weather(16);
-		$wtr["place"] = "जोम्सोम";
-		$wtr["max"] = changenumbers($wtr["max"]);
-		$wtr["min"] = changenumbers($wtr["min"]);
-		if($wtr["rain"] === "Traces")
+		if($wtr["status"] != "false")
 		{
-			$wtr["rain"] = "फाटफुट";
+			$wtr["place"] = "जोम्सोम";
+			$wtr["max"] = changenumbers($wtr["max"]);
+			$wtr["min"] = changenumbers($wtr["min"]);
+			if($wtr["rain"] === "Traces")
+			{
+				$wtr["rain"] = "फाटफुट";
+			}
+			else
+			{
+				$wtr["rain"] = changenumbers($wtr["rain"]);
+			}
 		}
-		else
-		{
-			$wtr["rain"] = changenumbers($wtr["rain"]);
-		}
-		
 		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
@@ -662,16 +702,19 @@ function nepali($place)
 	else if($place === "dharan")
 	{
 		$wtr = get_weather(17);
-		$wtr["place"] = "धरान";
-		$wtr["max"] = changenumbers($wtr["max"]);
-		$wtr["min"] = changenumbers($wtr["min"]);
-		if($wtr["rain"] === "Traces")
+		if($wtr["status"] != "false")
 		{
-			$wtr["rain"] = "फाटफुट";
-		}
-		else
-		{
-			$wtr["rain"] = changenumbers($wtr["rain"]);
+			$wtr["place"] = "धरान";
+			$wtr["max"] = changenumbers($wtr["max"]);
+			$wtr["min"] = changenumbers($wtr["min"]);
+			if($wtr["rain"] === "Traces")
+			{
+				$wtr["rain"] = "फाटफुट";
+			}
+			else
+			{
+				$wtr["rain"] = changenumbers($wtr["rain"]);
+			}
 		}
 		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
@@ -680,16 +723,19 @@ function nepali($place)
 	else if($place === "lumle")
 	{
 		$wtr = get_weather(18);
-		$wtr["place"] = "लुम्ले";
-		$wtr["max"] = changenumbers($wtr["max"]);
-		$wtr["min"] = changenumbers($wtr["min"]);
-		if($wtr["rain"] === "Traces")
+		if($wtr["status"] != "false")
 		{
-			$wtr["rain"] = "फाटफुट";
-		}
-		else
-		{
-			$wtr["rain"] = changenumbers($wtr["rain"]);
+			$wtr["place"] = "लुम्ले";
+			$wtr["max"] = changenumbers($wtr["max"]);
+			$wtr["min"] = changenumbers($wtr["min"]);
+			if($wtr["rain"] === "Traces")
+			{
+				$wtr["rain"] = "फाटफुट";
+			}
+			else
+			{
+				$wtr["rain"] = changenumbers($wtr["rain"]);
+			}
 		}
 		
 		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
@@ -699,18 +745,20 @@ function nepali($place)
 	else if($place === "janakpur")
 	{
 		$wtr = get_weather(19);
-		$wtr["place"] = "जनकपुर";
-		$wtr["max"] = changenumbers($wtr["max"]);
-		$wtr["min"] = changenumbers($wtr["min"]);
-		if($wtr["rain"] === "Traces")
+		if($wtr["status"] != "false")
 		{
-			$wtr["rain"] = "फाटफुट";
+			$wtr["place"] = "जनकपुर";
+			$wtr["max"] = changenumbers($wtr["max"]);
+			$wtr["min"] = changenumbers($wtr["min"]);
+			if($wtr["rain"] === "Traces")
+			{
+				$wtr["rain"] = "फाटफुट";
+			}
+			else
+			{
+				$wtr["rain"] = changenumbers($wtr["rain"]);
+			}
 		}
-		else
-		{
-			$wtr["rain"] = changenumbers($wtr["rain"]);
-		}
-		
 		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
@@ -718,18 +766,20 @@ function nepali($place)
 	else if($place === "jiri")
 	{
 		$wtr = get_weather(20);
-		$wtr["place"] = "जिरी";
-		$wtr["max"] = changenumbers($wtr["max"]);
-		$wtr["min"] = changenumbers($wtr["min"]);
-		if($wtr["rain"] === "Traces")
-		{
-			$wtr["rain"] = "फाटफुट";
+		if($wtr["status"] != "false")
+		{	
+			$wtr["place"] = "जिरी";
+			$wtr["max"] = changenumbers($wtr["max"]);
+			$wtr["min"] = changenumbers($wtr["min"]);
+			if($wtr["rain"] === "Traces")
+			{
+				$wtr["rain"] = "फाटफुट";
+			}
+			else
+			{
+				$wtr["rain"] = changenumbers($wtr["rain"]);
+			}
 		}
-		else
-		{
-			$wtr["rain"] = changenumbers($wtr["rain"]);
-		}
-		
 		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
