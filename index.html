@@ -1,70 +1,30 @@
 <!DOCTYPE html>
 <html>
-	<title>README: Nepal Weather API</title>
+	
+	<head>
+	<title>Nepal Weather API</title>
 	<meta charset='utf-8'>
 	<meta name="keywords" content="api, nepal weather api, nepal-weather-api, weather api, anurag regmi">
 	<meta name="author" content="Anurag Regmi">
 	<meta name="description" content="Weather api for Nepal">
-	<style>
-		html,body
-		{
-			margin: 0;
-			padding: 0;
-			
-			color: black;
-		}
-		
-		code
-		{
-			margin-left:0.2em;
-			margin-right:0.2em;
-			background-color: lightgrey;
-			font-size: 120%;
-			color:black;
-		}
-		pre
-		{
-			overflow: auto;
-			background-color: lightgrey;
-			padding-top:0.2em;
-		}
-		
-		.h0
-		{
-			font-size: 50px;
-			font-weight: bold;
-			width:12em;
-			margin:auto;
-		}
-		
-		#readme
-		{
-			max-width: 800px;
-			margin:auto;
-		}
-		
-		header,footer
-		{
-			width:100%;
-			background-color: grey;
-			color:white;
-			padding-top:1em;
-			padding-bottom:1em;
-		}
-		
-		
-	</style>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	</head>
+	
 	<body>
 		
-     <header>
-			<div class="h0">nepal - weather - api </div>
-			</header>
+		<div id="header">
+			<h1 class="header_text">Nepal Weather API </h1>
+		</div>
 		<div id="readme" >
 			<article >	
-			<h1>About</h1>
+			
+			<div class="section">	
+			<h1 class="header">About</h1>
 			 <p>This is the API for weather in Nepal. The data provided in this api is scrapped from <a href="http://mfd.gov.np/weather/">http://mfd.gov.np/weather/</a>. Its source code is available in the github. To contribute or go to source code <a href="https://github.com/anurag1234565/nepal-weather-api">Click here</a> </p>
-				
-			<h1>USING THE API</h1>
+			</div>
+			
+			<div class="section">	
+			<h1 class="header">USING THE API</h1>
 
 			<p>This api uses get request and returns value in json format.
 				<br>
@@ -102,17 +62,20 @@
 			</code></pre>
 
 			<p>if nothing passed then it will return nothing</p>
-
-			<h1>AVAILABLE placename</h1>
-
+			</div>
+		
+			<div class="section">
+			<h1 class="header" >AVAILABLE placename</h1>
 			<p>These are simply places available at <a href="http://mfd.gov.np/weather/">http://mfd.gov.np/weather/</a> science all the data are scrapped from that site<br>
 			<code>Dadeldhura,Dipayal,Dhangadi , Birendranagar , Nepalgunj , Jumla , Dang , Pokhara , Bhairahawa , Simara , Kathmandu , Okhaldhunga , Taplejung , Dhankuta , Biratnagar , Jomsom , Dharan , Lumle , Janakpur , Jiri</code> </p>
+			</div>
 			</article>
 		</div>
 		
-		<footer>
+		<div id="footer">
 			<center><del>&copy;</del>No Copy Rights !!</center>
-			<center>By: <a href="http://anuragregmi.com.np" style="text-decoration:none;">Anurag Regmi</a> </center>
-		</footer>
+			<center>By: <a href="http://anuragregmi.com.np" style="text-decoration:none;; color:black;">Anurag Regmi</a> </center>
+			<center>Frontend : <a href="http://ikushum.herokuapp.com" style="text-decoration:none; color:black;">Ishan Subedi</a> </center>
+		</div>
 	</body>
 </html>
