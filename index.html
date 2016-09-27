@@ -2,29 +2,31 @@
 <html>
 	
 	<head>
-	<title>Nepal Weather API</title>
+	<title>नेपाल मौसम</title>
 	<meta charset='utf-8'>
 	<meta name="keywords" content="api, nepal weather api, nepal-weather-api, weather api, anurag regmi">
 	<meta name="author" content="Anurag Regmi">
 	<meta name="description" content="Weather api for Nepal">
+	<link rel="stylesheet" type="text/css" href="w3.css">
 	<link rel="stylesheet" type="text/css" href="index.css">
 	</head>
 	
 	<body>
 		
 		<div id="header">
-			<h1 class="header_text">Nepal Weather API </h1>
+			<h1 class="header_text ">नेपाल मौसम API<br/><span id="below_header">अब थाहा पाहुनुहोस  मौसम नेपालीमा</span></h1>
+
 		</div>
 		<div id="readme" >
 			<article >	
 			
-			<div class="section">	
-			<h1 class="header">About</h1>
-			 <p>This is the API for weather in Nepal. The data provided in this api is scrapped from <a href="http://mfd.gov.np/weather/">http://mfd.gov.np/weather/</a>. Its source code is available in the github. To contribute or go to source code <a href="https://github.com/anurag1234565/nepal-weather-api">Click here</a> </p>
+			<div class="section w3-card-4">	
+			<h1 class="header">एस बारेमा(About)</h1>
+			 <p>यो नेपाली मौसम ए.पी.आइ(A.P.I) हो|यो ए.पी.आइ बाट नेपाली मा वा अंग्रेजी मा नेपाली मौसम हेर्न सक्नुहुन्छ |एसको स्रोत हरु यो देएको लिंक बाट तानिएको हो I<a href="http://mfd.gov.np/weather/">हेर्न येह थिनुहोस</a> एसको स्रोतहरु गिटहब (Github) मा पाहुन सक्नुहुन्छ I येस्मा योगदान गर्न एस लिंक मा जानुहोला I<a href="https://github.com/anurag1234565/nepal-weather-api">येहा थिनुहोस</a> </p>
 			</div>
 			
-			<div class="section">	
-			<h1 class="header">USING THE API</h1>
+			<div class="section w3-container w3-card-4">	
+			<h1 class="header w3-center">कसरि प्रयोग गर्ने ??(HOW TO USE)</h1>
 
 			<p>This api uses get request and returns value in json format.
 				<br>
@@ -42,7 +44,7 @@
 			<pre><code>{"1":{"status":"true","place":"डढेलधुरा","max":"२४.८ C","min":"१६.० C","rain":"०.० mm"},"2":{"status":"true","place":"दिपाएल","max":"३३.५ C","min":"२३.० C","rain":"५.२ mm"},"3":{"status":"true","place":"धनगढी","max":"३२.२ C","min":"२४.९ C","rain":"फाटफुट"},"4":{"status":"true","place":"बिरेन्द्र्नगर","max":"३१.९ C","min":"२१.९ C","rain":"फाटफुट"},"5":{"status":"true","place":"नेपालगञ्ज","max":"३४.० C","min":"२५.० C","rain":"०.० mm"},"6":{"status":"true","place":"जुम्ला","max":"२७.३ C","min":"१३.६ C","rain":"०.० mm"},"7":{"status":"true","place":"दाङ","max":"३१.८ C","min":"२१.५ C","rain":"०.४ mm"},"8":{"status":"true","place":"पोखरा","max":"३०.२ C","min":"२०.५ C","rain":"२७४.२ mm"},"9":{"status":"true","place":"भैरहवा","max":"३४.० C","min":"२४.४ C","rain":"४१.१ mm"},"10":{"status":"true","place":"सिमारा","max":"३३.५ C","min":"२५.० C","rain":"०.० mm"},"11":{"status":"true","place":"काठमाडौं","max":"२७.८ C","min":"१८.४ C","rain":"१६.६ mm"},"12":{"status":"true","place":"ओखल्ढुङ्गा","max":"२३.४ C","min":"१६.८ C","rain":"३३.२ mm"},"13":{"status":"true","place":"ताप्लेजुङ","max":"२६.२ C","min":"१७.२ C","rain":"४.० mm"},"14":{"status":"true","place":"धनकुटा","max":"२८.४ C","min":"२०.० C","rain":"०.८ mm"},"15":{"status":"true","place":"बिराटनगर","max":"३३.२ C","min":"२३.७ C","rain":"१२.७ mm"},"16":{"status":"true","place":"जोम्सोम","max":"२१.० C","min":"१२.० C","rain":"०.०* mm"},"17":{"status":"true","place":"धरान","max":"३२.५ C","min":"२४.६ C","rain":"२.१* mm"},"18":{"status":"true","place":"लुम्ले","max":"२३.५ C","min":"१५.५ C","rain":"८४.८* mm"},"19":{"status":"true","place":"जनकपुर","max":"३४.२ C","min":"२६.२ C","rain":"०.०* mm"},"20":{"status":"true","place":"जिरी","max":"२३.० C","min":"१७.० C","rain":"१४.७* mm"}}
 			</code></pre>
 
-			<h3>for particular place</h3>
+			<h3 class="w3-center">निश्चित ठाउँ को लागि (for particular place)</h3>
 
 			<p><code>https://nepal-weather-api.herokuapp.com/api/?place=dang</code> will return something like</p>
 
@@ -64,7 +66,7 @@
 			<p>if nothing passed then it will return nothing</p>
 			</div>
 		
-			<div class="section">
+			<div class="section w3-card-4">
 			<h1 class="header" >AVAILABLE placename</h1>
 			<p>These are simply places available at <a href="http://mfd.gov.np/weather/">http://mfd.gov.np/weather/</a> science all the data are scrapped from that site<br>
 			<code>Dadeldhura,Dipayal,Dhangadi , Birendranagar , Nepalgunj , Jumla , Dang , Pokhara , Bhairahawa , Simara , Kathmandu , Okhaldhunga , Taplejung , Dhankuta , Biratnagar , Jomsom , Dharan , Lumle , Janakpur , Jiri</code> </p>
@@ -74,8 +76,9 @@
 		
 		<div id="footer">
 			<center>&copy; Licensed under <a href="https://raw.githubusercontent.com/anurag1234565/nepal-weather-api/master/LICENSE">GNU GPL 3.0</a></center>
-			<center>By: <a href="http://anuragregmi.com.np" style="text-decoration:none;; color:black;">Anurag Regmi</a> </center>
-			<center>Frontend : <a href="http://ikushum.herokuapp.com" style="text-decoration:none; color:black;">Ishan Subedi</a> </center>
+			<center>By: <a class="w3-hover-text-deep-orange" href="http://anuragregmi.com.np" style="text-decoration:none;; color:black;">Anurag Regmi</a> </center>
+			<p class="w3-center">contributed by:<a class="w3-hover-text-deep-orange" href="https://github.com/akhil123pp" style="text-decoration:none;"> अखिल छेत्री </a></p>
+			<center>Frontend : <a class="w3-hover-text-deep-orange" href="http://ikushum.herokuapp.com" style="text-decoration:none; color:black;">Ishan Subedi</a> </center>
 		</div>
 	</body>
 </html>
