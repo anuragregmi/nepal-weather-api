@@ -13,7 +13,7 @@ html,body{
 	color:#d35400;
 	font-family: 'lato',sans-serif;
 	
-	background-image:url('header.jpg');
+	background-image:url('./img/header.jpg');
 	background-position:center;
 	background-repeat:no-repeat;
 	-webkit-background-size: cover;
