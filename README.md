@@ -39,7 +39,7 @@ if nothing passed then it will return nothing
 	
 
 #AVAILABLE placename
-These are simply places available at http://mfd.gov.np/weather/ science all the data are scrapped from that site<br>
+These are simply places available at http://mfd.gov.np/weather/ since all the data are scrapped from that site<br>
 ```Dadeldhura,Dipayal,Dhangadi , Birendranagar , Nepalgunj , Jumla , Dang , Pokhara , Bhairahawa , Simara , Kathmandu , Okhaldhunga , Taplejung , Dhankuta , Biratnagar , Jomsom , Dharan , Lumle , Janakpur , Jiri``` 
 
 	
