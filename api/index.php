@@ -3,6 +3,10 @@
 	Nepal-Weather-Api by Anurag Regmi.
 */
 
+//for error message
+$error["status"] = "false";
+$error["msg"] = "sorry could not find that place... please pass the place=[one of the valid places]";
+$error["valid_places"] = ['Dadeldhura','Dipayal','Dhangadi','Birendranagar','Nepalgunj','Jumla','Dang','Pokhara','Bhairahawa','Simara','Kathmandu','Okhaldhunga','Taplejung','Dhankuta','Biratnagar','Jomsom','Dharan','Lumle','Janakpur','Jiri'];
 
 $no = 0;//global variable to store no of places
 
@@ -340,9 +344,8 @@ function english($place)//for english
 	
 	else
 	{
-		$result = "{\"status\":\"false\",\"msg\":\"sorry could not find that place... please pass the place=[one of the valid places]\",\"valid_places\":['Dadeldhura','Dipayal','Dhangadi','Birendranagar','Nepalgunj','Jumla','Dang','Pokhara','Bhairahawa','Simara','Kathmandu','Okhaldhunga','Taplejung','Dhankuta','Biratnagar','Jomsom','Dharan','Lumle','Janakpur','Jiri']}";
-
-		echo $result;
+		
+		print_r(json_encode($GLOBALS['error']));
 	}
 	
 }
@@ -796,9 +799,7 @@ function nepali($place)
 	else
 	{
 	
-		$result = "{\"status\":\"false\",\"msg\":\"sorry could not find that place... please pass the place=[one of the valid places]\",\"valid_places\":['Dadeldhura','Dipayal','Dhangadi','Birendranagar','Nepalgunj','Jumla','Dang','Pokhara','Bhairahawa','Simara','Kathmandu','Okhaldhunga','Taplejung','Dhankuta','Biratnagar','Jomsom','Dharan','Lumle','Janakpur','Jiri']}";
-
-		echo $result;
+		print_r(json_encode($GLOBALS['error']));
 
 	}
 	
