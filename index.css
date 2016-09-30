@@ -11,8 +11,6 @@ html,body{
 	top:-60px;
 	background-color:black;
 	color:white;
-	font-family: 'lato',sans-serif;
-	
 	background-image:url('img/header.jpg');
 	background-position:center;
 	background-repeat:no-repeat;
@@ -20,19 +18,18 @@ html,body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+	display:block;
 	width:100%;
-	height: 450px;
+	height:60%;
 }
 
 h1.header_text{
 	text-align: center;
-	font-weight:400;
-	font-size: 70px;
+	font-size: 90px;
+	font-weight: bold;
 	position: relative;
-	top:35%;
-}
-span#below_header{
-	font-size: 40px;
+	top:25%;
+	border-bottom: none
 }
 
 .section{
@@ -43,9 +40,9 @@ span#below_header{
 }
 
 h1.header{
-	color: black;
-	text-align: center;
-	font-size:30px;
+	color: #404040;
+	text-align: left;
+	font-size:25px;
 	border-bottom: 1px solid #e3dbdb;
 	padding:20px;
 	font-weight:normal;
@@ -113,3 +110,4 @@ code{
 	font-size:15px;
 }
 
+}
