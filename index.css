@@ -89,25 +89,25 @@ pre{
 
 @media screen and (max-width: 480px){
 
-#readme{
-	margin:0px 5%;
-}
+	#readme{
+		margin:0px 5%;
+	}
 
-h1.header_text{
-	font-size: 50px;
-	padding:0px 10%;
-}
+	h1.header_text{
+		font-size: 50px;
+		padding:0px 10%;
+	}
 
-h1.header{
-	font-size:20px;
-}
+	h1.header{
+		font-size:20px;
+	}
 
-p{
-	font-size:15px;
-}
+	p{
+		font-size:15px;
+	}
 
-code{
-	font-size:15px;
-}
+	code{
+		font-size:15px;
+	}
 
 }
