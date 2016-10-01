@@ -29,8 +29,15 @@ h1.header_text{
 	font-weight: bold;
 	position: relative;
 	top:25%;
-	border-bottom: none
+	border:none;
 }
+
+.switch
+{
+	margin:0px 15%;
+	
+}
+
 
 .section{
 	border-bottom: 1px solid #e3dbdb;
@@ -85,6 +92,11 @@ pre{
 	padding:40px 0px;
 	background-color: #b1b1b1;
 	color:black;
+}
+
+mark
+{
+	background-color: #fff;
 }
 
 @media screen and (max-width: 480px){
