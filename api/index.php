@@ -29,7 +29,7 @@ function get_weather($grp)
 		$final[$i] = explode('&nbsp;',$results[$i]);//breaking into particular information of that place $final
 	}
 	
-	$weather["status"] = "true";//sets status to true
+	$result["status"] = "true";//sets status to true
 	
 	//converting index to value for the json formatt
 	for($i=1; $i<=$noOfPlaces; $i++)
@@ -69,7 +69,8 @@ function get_weather($grp)
 	
 	if ($grp === "all") //returns all data if argument is all
 	{
-		 return $weather;
+		$result["weather"] = array_values($weather);  
+		return $weather;
 	}
 	
 	else if($grp <= $noOfPlaces)
@@ -240,107 +241,107 @@ function english($place)//for english
 	
 	if($place === "dadeldhura")
 	{
-		print_r(json_encode(array_values(get_weather(1))));
+		print_r(json_encode(get_weather(1)));
 	}
 	
 	else if($place === "dipayal")
 	{
-		print_r(json_encode(array_values(get_weather(2))));
+		print_r(json_encode(get_weather(2)));
 	}
 	
 	else if($place === "dhangadi")
 	{
-		print_r(json_encode(array_values(get_weather(3))));
+		print_r(json_encode(get_weather(3)));
 	}
 	
 	else if($place === "birendranagar")
 	{
-		print_r(json_encode(array_values(get_weather(4))));
+		print_r(json_encode(get_weather(4)));
 	}
 	
 	else if($place === "nepalgunj")
 	{
-		print_r(json_encode(array_values(get_weather(5))));
+		print_r(json_encode(get_weather(5)));
 	}
 	
 	else if($place === "jumla")
 	{
-		print_r(json_encode(array_values(get_weather(6))));
+		print_r(json_encode(get_weather(6)));
 	}
 	
 	else if($place === "dang")
 	{
-		print_r(json_encode(array_values(get_weather(7))));
+		print_r(json_encode(get_weather(7)));
 	}
 	
 	else if($place === "pokhara")
 	{
-		print_r(json_encode(array_values(get_weather(8))));
+		print_r(json_encode(get_weather(8)));
 	}
 	
 	else if($place === "bhairahawa")
 	{
-		print_r(json_encode(array_values(get_weather(9))));
+		print_r(json_encode(get_weather(9)));
 	}
 	
 	else if($place === "simara")
 	{
-		print_r(json_encode(array_values(get_weather(10))));
+		print_r(json_encode(get_weather(10)));
 	}
 	
 	else if($place === "kathmandu")
 	{
-		print_r(json_encode(array_values(get_weather(11))));
+		print_r(json_encode(get_weather(11)));
 	}
 	
 	else if($place === "okhaldhunga")
 	{
-		print_r(json_encode(array_values(get_weather(12))));
+		print_r(json_encode(get_weather(12)));
 	}
 	
 	else if($place === "taplejung")
 	{
-		print_r(json_encode(array_values(get_weather(13))));
+		print_r(json_encode(get_weather(13)));
 	}
 	
 	else if($place === "dhankuta")
 	{
-		print_r(json_encode(array_values(get_weather(14))));
+		print_r(json_encode(get_weather(14)));
 	}
 	
 	else if($place === "biratnagar")
 	{
-		print_r(json_encode(array_values(get_weather(15))));
+		print_r(json_encode(get_weather(15)));
 	}
 	
 	else if($place === "jomsom")
 	{
-		print_r(json_encode(array_values(get_weather(16))));
+		print_r(json_encode(get_weather(16)));
 	}
 	
 	else if($place === "dharan")
 	{
-		print_r(json_encode(array_values(get_weather(17))));
+		print_r(json_encode(get_weather(17)));
 	}
 	
 	else if($place === "lumle")
 	{
-		print_r(json_encode(array_values(get_weather(18))));
+		print_r(json_encode(get_weather(18)));
 	}
 	
 	else if($place === "janakpur")
 	{
-		print_r(json_encode(array_values(get_weather(19))));
+		print_r(json_encode(get_weather(19)));
 	}
 	
 	else if($place === "jiri")
 	{
-		print_r(json_encode(array_values(get_weather(20))));
+		print_r(json_encode(get_weather(20)));
 	}
 	
 	else if($place === "all")
 	{
-		print_r(json_encode(array_values(get_weather("all"))));
+		print_r(json_encode(get_weather("all")));
 	}
 	
 	else
@@ -376,7 +377,7 @@ function nepali($place)
 				$wtr["rain"] = changenumbers($wtr["rain"]);
 			}
 		}
-		$wtr = json_encode(array_values($wtr),JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
 	
@@ -397,7 +398,7 @@ function nepali($place)
 				$wtr["rain"] = changenumbers($wtr["rain"]);
 			}
 		}
-		$wtr = json_encode(array_values($wtr),JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
 	
@@ -420,7 +421,7 @@ function nepali($place)
 		}
 			
 		
-		$wtr = json_encode(array_values($wtr),JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
 	
@@ -442,7 +443,7 @@ function nepali($place)
 			}
 		}
 
-		$wtr = json_encode(array_values($wtr),JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
 	
@@ -464,7 +465,7 @@ function nepali($place)
 			}
 		}
 		
-		$wtr = json_encode(array_values($wtr),JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
 	
@@ -485,7 +486,7 @@ function nepali($place)
 				$wtr["rain"] = changenumbers($wtr["rain"]);
 			}
 		}
-		$wtr = json_encode(array_values($wtr),JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
 	
@@ -506,7 +507,7 @@ function nepali($place)
 				$wtr["rain"] = changenumbers($wtr["rain"]);
 			}
 		}
-		$wtr = json_encode(array_values($wtr),JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
 	
@@ -528,7 +529,7 @@ function nepali($place)
 			}
 		}
 		
-		$wtr = json_encode(array_values($wtr),JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
 	
@@ -550,7 +551,7 @@ function nepali($place)
 			}
 		}
 		
-		$wtr = json_encode(array_values($wtr),JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
 	
@@ -572,7 +573,7 @@ function nepali($place)
 			}
 		}
 		
-		$wtr = json_encode(array_values($wtr),JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
 	
@@ -594,7 +595,7 @@ function nepali($place)
 			}
 		}
 		
-		$wtr = json_encode(array_values($wtr),JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
 	
@@ -615,7 +616,7 @@ function nepali($place)
 				$wtr["rain"] = changenumbers($wtr["rain"]);
 			}
 		}
-		$wtr = json_encode(array_values($wtr),JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
 	
@@ -636,7 +637,7 @@ function nepali($place)
 				$wtr["rain"] = changenumbers($wtr["rain"]);
 			}
 		}
-		$wtr = json_encode(array_values($wtr),JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
 	
@@ -657,7 +658,7 @@ function nepali($place)
 				$wtr["rain"] = changenumbers($wtr["rain"]);
 			}
 		}
-		$wtr = json_encode(array_values($wtr),JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
 	
@@ -678,7 +679,7 @@ function nepali($place)
 				$wtr["rain"] = changenumbers($wtr["rain"]);
 			}
 		}
-		$wtr = json_encode(array_values($wtr),JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
 	
@@ -699,7 +700,7 @@ function nepali($place)
 				$wtr["rain"] = changenumbers($wtr["rain"]);
 			}
 		}
-		$wtr = json_encode(array_values($wtr),JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
 	
@@ -720,7 +721,7 @@ function nepali($place)
 				$wtr["rain"] = changenumbers($wtr["rain"]);
 			}
 		}
-		$wtr = json_encode(array_values($wtr),JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
 	
@@ -742,7 +743,7 @@ function nepali($place)
 			}
 		}
 		
-		$wtr = json_encode(array_values($wtr),JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
 	
@@ -763,7 +764,7 @@ function nepali($place)
 				$wtr["rain"] = changenumbers($wtr["rain"]);
 			}
 		}
-		$wtr = json_encode(array_values($wtr),JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
 	
@@ -784,7 +785,7 @@ function nepali($place)
 				$wtr["rain"] = changenumbers($wtr["rain"]);
 			}
 		}
-		$wtr = json_encode(array_values($wtr),JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 	}
 	
@@ -792,7 +793,7 @@ function nepali($place)
 	{
 		$wtr = get_weather("all");
 		$wtr = alltonepali($wtr);
-		$wtr = json_encode(array_values($wtr),JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+		$wtr = json_encode($wtr,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		print_r($wtr);
 		
 	}
