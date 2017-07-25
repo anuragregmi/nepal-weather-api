@@ -76,7 +76,7 @@ function get_weather($grp)
 	else if($grp <= $noOfPlaces)
 	{						
 	 //for particular argument
-		return $weather[$grp];
+		return $weather["weather"][$grp];
 	}
 	
 	else
