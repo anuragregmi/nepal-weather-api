@@ -70,7 +70,7 @@ function get_weather($grp)
 	if ($grp === "all") //returns all data if argument is all
 	{
 		$result["weather"] = array_values($weather);  
-		return $weather;
+		return $result;
 	}
 	
 	else if($grp <= $noOfPlaces)
