@@ -792,7 +792,7 @@ function nepali($place)
 	else if($place === "all")
 	{
 		$wtr = get_weather("all");
-		$wtr = array_values(alltonepali($wtr));
+		$wtr = array_values(alltonepali($wtr["weather"]));
 		$result["status"] = "true";
 		$result["weather"] = $wtr;
 		$result = json_encode($result,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
